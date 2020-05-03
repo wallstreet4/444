@@ -10,9 +10,9 @@
 </script>
 
 <style lang='stylus'>
-	.footer{
-		h1{
+	.footer
+		h1
 			color: green;
-		}
-	}
+		
+	
 </style>
