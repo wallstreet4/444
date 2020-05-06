@@ -53,16 +53,90 @@
 		</div>
 		
 		
+		<div class="conent2">
+			<div class="level">
+				<div class="box">
+					<h3>找到适合你的课程</h3>
+					<div>
+						<p>我们很乐意为你找到适合你的英语水平的课程</p>
+						<p class='txt'>英语测试</p>
+						<p class='txt'>免费课程</p>
+						<p class='txt'>立即咨询</p>
+					</div>
+				</div>
+			</div>
+			<div class="wrap">
+				<div class="txt">
+					<h3>欢迎来到学习中心</h3>
+					<p>华尔街英语在中国拥有75家学习中心。我们为你提供优良的学习环境，让学生能够享乐其中，参与丰富的活动、结识新的朋友。</p>
+					<p class='btn'> 最近学习中心</p>
+				</div>
+				<div class="banner">
+					<ul :style='{left: left+"px"}' :class='{on}'>
+						<li><img src="../../../static/lrt/item3.png" alt=""></li>
+						<li><img src="../../../static/lrt/item1.png" alt=""></li>
+						<li><img src="../../../static/lrt/item2.png" alt=""></li>
+						<li><img src="../../../static/lrt/item3.png" alt=""></li>
+						<li><img src="../../../static/lrt/item1.png" alt=""></li>
+					</ul>
+				</div>
+				<div class="nav">
+					<div class='left' @click='add'></div>
+					<div class='right' @click='plus'></div>
+				</div>
+				<div class="red">
+					<p>咨询我们</p>
+				</div>
+			</div>
+		</div>
+		
+		
 	</div>
 </template>
 
 <script>
+	export default{
+		data(){
+			return{
+				left: -572,
+				on: true
+			}
+		},
+		methods:{
+			add(){
+				this.left -= 572;
+				if(this.left == -2288){
+					setTimeout(() => {
+						this.on = false;
+						this.left = -572;
+						setTimeout(() => {
+							this.on = true;
+						},10)
+					},500)
+				}
+			},
+			plus(){
+				this.left += 572;
+				if(this.left == 0){
+					setTimeout(() => {
+						this.on = false;
+						this.left = -1716;
+						setTimeout(() => {
+							this.on = true;
+						},10)
+					},500)
+				}
+			}
+		}
+	}
 </script>
 
 <style lang='stylus'>
 	.curriculum{
 		position: relative;
 		overflow: hidden;
+		width: 1423px;
+		margin: 0 auto;
 		.top{
 			box-sizing: border-box;
 			padding: 0 200px;
@@ -72,17 +146,228 @@
 			}
 		}
 		
-		
+		.conent2{
+			position: relative;
+			padding-top: 189px;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 347px;
+				left: -556px;
+				z-index: 0;
+				width: 1491px;
+				height: 1491px;
+				border-radius: 100%;
+				border: 3px solid #043458;
+			}
+			.wrap{
+				margin-top: 100px;
+				margin-left: 200px;
+				display: flex;
+				height: 900px;
+				position: relative;
+				.red{
+					position: absolute;
+					top: 60%;
+					width: 136px;
+					height: 136px;
+					background: #ee2d42;
+					box-shadow: 0px 18px 25px 10px rgba(238, 45, 66, 0.48);
+					border-radius: 50%;
+					content: '';
+					transform: scale(1);
+					transition: transform 0.3s linear;
+					text-align: center;
+					color: #fff;
+					line-height: 136px;
+					right: 670px;
+				}
+				.nav{
+					position: absolute;
+					right: 250px;
+					z-index: 99;
+					top: 65%;
+					transform: translate(-30%, -91%);
+					width: 136px;
+					height: 136px;
+					background: rgba(4, 52, 88, 0.58);
+					box-shadow: 0 18px 25px 10px rgba(4, 52, 88, 0.58);
+					border-radius: 100%;
+					&:before{
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin-left: -1px;
+						margin-top: -68px;
+						width: 3px;
+						height: 136px;
+						background: #fff;
+						z-index: 10;
+					}
+					div:hover{
+						background: #fff;
+					}
+					.left:hover:before{
+						background-image: url(../../../static/lrt/sprites_img.png);
+						background-position: -1106px -776px;
+						width: 18px;
+						height: 31px;
+					}
+					.right:hover:before{
+						background-image: url(../../../static/lrt/sprites_img.png);
+						background-position: -1154px -776px;
+						    width: 18px;
+						    height: 31px;
+					}
+					.left{
+						width: 50%;
+						height: 100%;
+						display: block;
+						float: left;
+						position: relative;
+						font-size: 0;
+						background: #043458;
+						border-radius: 200px 0px 0px 200px;
+						text-align: center;
+						&:before{
+							content: '';
+							background-image: url(../../../static/lrt/sprites_img.png);
+							background-position: -962px -776px;
+							width: 18px;
+							height: 31px;
+							display: block;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							margin-left: -9px;
+							margin-top: -15px;
+						}
+					}
+					.right{
+						width: 50%;
+						height: 100%;
+						display: block;
+						float: left;
+						position: relative;
+						font-size: 0;
+						background: #043458;
+						border-radius: 0px 200px 200px 0px;
+						text-align: center;
+						&:before{
+							content: '';
+							background-image: url(../../../static/lrt/sprites_img.png);
+							background-position: -1202px -776px;
+							width: 18px;
+							height: 31px;
+							display: block;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							margin-left: -9px;
+							margin-top: -15px;
+						}
+					}
+				}
+				.txt{
+					width: 400px;
+					h3{
+						font-size: 40px;
+						line-height: 50px;
+						color: #043458;
+						padding-bottom: 15px;
+						font-weight: bold;
+					}
+					p{
+						font-size: 16px;
+						line-height: 24px;
+						font-weight: normal;
+						padding-left: 60px;
+					}
+					.btn{
+						font-weight: bold;
+						color: red;
+						margin-top: 30px;
+						text-decoration:underline;
+						&:hover{
+							color: #0082a9;
+						}
+					}
+				}
+				.banner{
+					width: 100%;
+					height: 572px;
+					max-width: 570px;
+					overflow: hidden;
+					position: relative;
+					z-index: 10;
+					ul{
+						position: absolute;
+						left: 0;
+						display: flex;
+					}
+					ul.on{
+						transition: all .5s;
+					}
+				}
+			}
+			.level{
+				    width: 100%;
+				    max-width: 451px;
+				    position: relative;
+				    margin-left: 176px;
+					width: 100%;
+					height: 451px;
+					border-radius: 100%;
+					background: #ee2d42;
+					position: relative;
+					.box{
+						width: 100%;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						max-width: 300px;
+						font-size: 18px;
+						color: #fff;
+						transform: translate(-50%, -51%);
+						h3{
+							font-size: 30px;
+							line-height: 36px;
+							padding-bottom: 3px;
+							font-weight: bold;
+						}
+						div{
+							box-sizing: border-box;
+							padding-left: 20px;
+							p{
+								font-size: 16px;
+								line-height: 24px;
+								font-weight: normal;
+								margin-top: 10px;
+							}
+							.txt{
+								text-decoration:underline;
+								font-weight: bold;
+								color: #fff;
+								&:hover{
+									color: rgb(0,130,169)
+								}
+							}
+						}
+					}
+			}
+		}
 		
 		.conent{
 			display: flex;
 			margin-top: 100px;
 			box-sizing: border-box;
 			padding: 0 50px;
+			position: relative;
 			&:before{
 				content: '';
 				position: absolute;
-				bottom: -50px;
+				bottom: 50px;
 				margin-left: -1081px;
 				left: 50%;
 				width: 2317px;
@@ -95,7 +380,7 @@
 				max-width: 474px;
 				img{
 					width: 100%;
-					margin-top: 50px;
+					margin-top: 150px;
 					position: relative;
 					z-index: 10;
 				}
