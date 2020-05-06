@@ -206,6 +206,7 @@ export default {
         .list .code {
           width: 220px;
           height: 33px;
+          display block
           background-color: #043458;
           color: #fff;
           text-align: center;
