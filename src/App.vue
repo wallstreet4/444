@@ -20,6 +20,9 @@ export default {
 </script>
 
 <style>
+	#app{
+		padding-top: 110px;
+	}
 ul,li,ol{
 	list-style: none;
 }
