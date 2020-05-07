@@ -263,12 +263,16 @@
 		</div>
 
 		<!-- 联系方式 -->
-		<div class="i-right">
-			<div>
-				<img src="../assets/mengze/weixin.png" alt="">
+		<div class="i-right" @mouseleave="changeNo">
+			<div :class="r1?'ir-top i-rActive':'ir-top'">
+				<p>在线咨询</p>
+				<div @mouseenter="changeBg(1)"><span></span></div>
+				
 			</div>
-			<div>
-				<img src="../assets/mengze/phone.png" alt="">
+			<div :class="r2?'ir-bottom i-rActive':'ir-bottom'">
+				<p>电话咨询</p>
+				<div @mouseenter="changeBg(2)"><span></span></div>
+				
 			</div>
 		</div>
 
@@ -283,6 +287,8 @@
 		name: 'carrousel',
 		data() {
 			return {
+				r1:false,
+				r2:false,
 				serviceShow:true,
 				swiperOptions1: {
 					pagination: {
@@ -307,6 +313,20 @@
 			}
 		},
 		methods:{
+			changeNo(){
+				this.r1=false;
+				this.r2=false;
+			},
+			changeBg(a){
+				console.log(a)
+				if (a==1) {
+					this.r1=true;
+					this.r2=false;
+				} else{
+					this.r1=false;
+					this.r2=true;
+				}
+			},
 			closeService(){
 				if (this.serviceShow) {
 					this.serviceShow=false
@@ -392,6 +412,9 @@
 			border 1px solid rgba(238, 45, 66, 0.15);
 			transform: scale(1.3);
 			animation: warn2 1s ease-out infinite
+		}
+		.imb-red:hover{
+			background: #EB5E6C;
 		}
 		.imb-red {
 
@@ -806,7 +829,9 @@
 						.imb3-red::before {
 							border: 1px solid rgba(4, 52, 88, 0.15);
 						}
-
+						.imb3-red:hover{
+							background: #406682;
+						}
 						.imb3-red {
 							position: relative;
 							top: -164px;
@@ -872,7 +897,9 @@
 						.imb4-red::before {
 							border: 1px solid rgba(4, 52, 88, 0.15);
 						}
-
+						.imb4-red:hover{
+							background: #406682;
+						}
 						.imb4-red {
 							position: relative;
 							top: 0;
@@ -1090,7 +1117,9 @@
 							.imb64-red::before {
 								border: 1px solid rgba(4, 52, 88, 0.15);
 							}
-
+							.imb64-red:hover{
+								background: #406682;
+							}
 							.imb64-red {
 								position: relative;
 								top: -123px;
@@ -1107,7 +1136,7 @@
 				}
 			}
 		}
-
+		
 		//客服····································································
 		.i-service {
 			// display none;
@@ -1171,24 +1200,72 @@
 				height: 40px;
 			}
 		}
-
+		
 		//联系方式···································································
 		.i-right {
-			width 60px;
+			width 220px;
 			height 126px;
 			position fixed;
 			right 0;
 			top 173px;
 			z-index 100;
-
-			div {
-				width 60px;
+			.i-rActive{
+				p{
+					opacity 1 !important;
+					background #0082A9;
+				}
+				div{
+					background #0082A9 !important;
+				}
+			}
+			.ir-top,.ir-bottom {
+				width 220px;
 				height 50%;
-				background #043458;
+				
 				display flex;
 				align-items center;
-				justify-content center
+				justify-content flex-end;
+				p{
+					width 150px;
+					height 63px;
+					line-height 63px;
+					text-align: center;
+					font-size 25px;
+					color #fff;
+					// background #043458;
+					opacity 0;
+				}
+				div{
+					background #043458;
+					width 63px;
+					height 63px;
+					display flex;
+					align-items center;
+					justify-content center;
+					span{
+						display block;
+					}
+				}
+			}
+			.ir-top{
+				div{
+					span{
+						background: url(../assets/mengze/sprites_img.png) no-repeat -1075px -583px;
+						width: 40px;
+						height: 40px;
+					}
+				}
+			}
+			.ir-bottom{
+				div{
+					span{
+						background: url(../assets/mengze/sprites_img.png) no-repeat -1950px -583px;
+						width: 28px;
+						height: 28px;
+					}
+				}
 			}
 		}
+		
 	}
 </style>
