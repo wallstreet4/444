@@ -149,6 +149,7 @@
 		color: #ffffff;
 		padding: 0;
 		position: relative;
+		margin-top: 43px;
 		&:before{
 			content: '';
 			display: block;

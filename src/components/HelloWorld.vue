@@ -22,11 +22,14 @@
 		<div class="center">
 			<img src="../../static/lrt/logo-wse.jpg" alt="">
 			<ul>
-				<li>企业培训</li>
-				<li>企业解决方案</li>
-				<li>管理解决方案</li>
-				<li>成功经验</li>
-				<li class='on'>电话：400 852 7600</li>
+				<li>你选择华尔街英语是因为</li>
+				<router-link to='curriculum' tag='li'>课程</router-link>
+				<router-link to='onlinecourses' tag='li'>在线课程</router-link>
+				<li>学习之旅</li>
+				<li>优质师资</li>
+				<li>最新消息</li>
+				<li>联系我们</li>
+				<li class='on'>免费体验</li>
 			</ul>
 		</div>
 	</div>
@@ -140,6 +143,10 @@ export default {
 					li{
 						padding: 0 10px;
 						border-right: 1px solid #000;
+						&:hover{
+							color: #0082a9;
+							cursor:pointer;
+						}
 					}
 					.on{
 						color: red;

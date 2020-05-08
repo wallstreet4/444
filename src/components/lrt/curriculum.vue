@@ -1,7 +1,7 @@
 <template>
 	<div class="curriculum">
 		<div class="top">
-			<span>首页</span>
+			<router-link to='index' tag='span'>首页</router-link>
 			|
 			<span>课程</span>
 		</div>
@@ -137,12 +137,18 @@
 		overflow: hidden;
 		width: 1423px;
 		margin: 0 auto;
+		padding-top: 30px;
 		.top{
 			box-sizing: border-box;
 			padding: 0 200px;
 			& span:nth-child(2){
 				color: red;
 				font-weight: bold;
+			}
+			& span:nth-child(1){
+				&:hover{
+					color: rgb(0,130,169);
+				}
 			}
 		}
 		
