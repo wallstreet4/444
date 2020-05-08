@@ -16,6 +16,10 @@ export default new Router({
 		{
 			path: '/enterprise',
 			component: () => import('../components/enterprise.vue')
+		},
+		{
+			path: '/learningjourney',
+			component: () => import('../components/learningjourney.vue')
 		}
 
 	]
