@@ -9,6 +9,8 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import footer from "./components/footer.vue";
+import experience from "./components/experience.vue";
+import passageway from "./components/passageway.vue";
 
 export default {
   name: "App",

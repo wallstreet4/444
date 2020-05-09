@@ -11,7 +11,10 @@ import contactus from "@/components/contactus"
 import learning from '@/components/learning'
 import latest from '@/components/latest'
 import wallstreet from '@/components/wallstreet'
- 
+import experience from '@/components/experience'
+import studentchannel from '@/components/passageway'
+import occupation from '@/components/occupation'
+
 Vue.use(Router)
  
 export default new Router({
@@ -54,8 +57,19 @@ export default new Router({
 	 	component: contactus
 	 },{ path: '/latest', name: 'latest', component: latest },
     { path: '/wallstreet', name: 'wallstreet', component: wallstreet },
-	{ path: '/learning', name: 'learning', component: learning }
+	{ path: '/learning', name: 'learning', component: learning },{
+      path: '/experience',
+      name: 'experience',
+      component: experience
+    },{
+      path: '/studentchannel',
+      component: studentchannel
+    },{
+      path: '/because',
+      component: occupation
+    },
   ]
 })
+
 
 
