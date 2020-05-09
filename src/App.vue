@@ -20,5 +20,14 @@ export default {
 </script>
 
 <style>
-
+	#app{
+		padding-top: 110px;
+	}
+ul,li,ol{
+	list-style: none;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
 </style>
