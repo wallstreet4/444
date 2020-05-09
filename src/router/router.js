@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
- 
+
 //组件模块
 import index from '@/components/index'
 import curriculum from '@/components/lrt/curriculum'
@@ -16,5 +16,14 @@ export default new Router({
     { path: '/', name: 'index', component: index },
      { path: '/curriculum', name: 'curriculum', component: curriculum },
 	 { path: '/onlinecourses', name: 'onlinecourses', component: onlinecourses },
+	 {
+	 	path: '/enterprise',
+	 	component: () => import('../components/enterprise.vue')
+	 },
+	 {
+	 	path: '/learningjourney',
+	 	component: () => import('../components/learningjourney.vue')
+	 }
   ]
 })
+
