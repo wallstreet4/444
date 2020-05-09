@@ -1,5 +1,6 @@
 <template>
   <div class="wallstreet">
+    <!-- banner部分 -->
     <div class="content_header">
       <div class="header_dis">
         <div class="title">
@@ -13,15 +14,21 @@
         <h1>改变未来力量</h1>
       </div>
     </div>
-
+    <!-- banner部分 -->
+    <!-- 成功经验 -->
     <div class="content_item">
       <h2>45年的成功经验</h2>
       <p>华尔街英语拥有45年的专业英语教学经验。我们已先后帮助了全球超过300万学员学习和提升自身的英语能力。2000年，我们在中国成立了第一家学习中心。今天，我们已经在中国11座城市拥有了75个学习中心。 就从今天起，来华尔街英语开始你的学习之旅吧！</p>
     </div>
+    <!-- 成功经验 -->
 
+    <!-- 跳舞的人 -->
     <div class="fixed_img">
       <img src="@/assets/wallstreet/content.png" alt />
     </div>
+    <!-- 跳舞的人 -->
+
+    <!-- 价值观 -->
     <div class="about_mission">
       <h2>我们的使命与价值观</h2>
       <div class="mission_size">
@@ -35,7 +42,9 @@
         </p>
       </div>
     </div>
+    <!-- 价值观 -->
 
+    <!-- 享誉全球 -->
     <div class="about_recognised">
       <div class="recognised_title">
         <h2>享誉全球</h2>
@@ -70,32 +79,85 @@
         <img src="@/assets/wallstreet/banner3.png" alt />
       </div>
     </div>
+    <!-- 享誉全球 -->
 
+    <!-- 最新消息 -->
     <div class="about_slider">
       <h2 class="hover_title">最新消息</h2>
       <div class="slider_box">
         <div class="swiper-container2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class='slide_wrap' v-for='(item,index) in bannerBox3' :key='index'>
-                <p class='wrap_img'><img :src="item.img" alt=""></p>
+              <div class="slide_wrap" v-for="(item,index) in bannerBox3" :key="index">
+                <p class="wrap_img">
+                  <img :src="item.img" alt />
+                </p>
                 <h3>{{item.name}}</h3>
-                <p class='wrap_time'>{{item.time}}</p>
+                <p class="wrap_time">{{item.time}}</p>
                 <p>{{item.content}}</p>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class='slide_wrap' v-for='(item,index) in bannerBox4' :key='index'>
-                <p class='wrap_img'><img :src="item.img" alt=""></p>
+              <div class="slide_wrap" v-for="(item,index) in bannerBox4" :key="index">
+                <p class="wrap_img">
+                  <img :src="item.img" alt />
+                </p>
                 <h3>{{item.name}}</h3>
-                <p class='wrap_time'>{{item.time}}</p>
+                <p class="wrap_time">{{item.time}}</p>
                 <p>{{item.content}}</p>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="swiper-button-prev" id="prev"></div>
+        <div class="swiper-button-next" id="next"></div>
       </div>
     </div>
+    <!-- 最新消息 -->
+
+    <!-- 圆弧 -->
+    <div class="radius">
+      <img src="@/assets/wallstreet/radius.png" alt />
+    </div>
+    <!-- 圆弧 -->
+
+    <!-- 我们的故事 -->
+    <div class="about_footer">
+      <div class="footer_size">
+        <h2>我们的故事：华尔街英语在中国。</h2>
+      </div>
+      <div class="swiper-container3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class='slide_three_box'>
+              <p class='slide_three_box_img'><img src='@/assets/wallstreet/footer_banner1.png' alt /></p>
+              <h3>全新App体验</h3>
+              <p class='slide_three_box_time'>2017年7月1日</p>
+              <p>华尔街英语推出了一款全新的APP，它可以让学员在安卓或苹果系统的平板或者手机上随时随地学习英语。</p>
+            </div>
+            <div class='slide_three_box'>
+              <p class='slide_three_box_img'><img src='@/assets/wallstreet/footer_banner2.png' alt /></p>
+              <h3>全新App体验</h3>
+              <p class='slide_three_box_time'>2017年7月1日</p>
+              <p>华尔街英语推出了一款全新的APP，它可以让学员在安卓或苹果系统的平板或者手机上随时随地学习英语。</p>
+            </div>
+            <div class='slide_three_box'>
+              <p class='slide_three_box_img'><img src='@/assets/wallstreet/footer_banner3.png' alt /></p>
+              <h3>全新App体验</h3>
+              <p class='slide_three_box_time'>2017年7月1日</p>
+              <p>华尔街英语推出了一款全新的APP，它可以让学员在安卓或苹果系统的平板或者手机上随时随地学习英语。</p>
+            </div>
+          </div>
+          <div class="swiper-slide">2</div>
+          <div class="swiper-slide">3</div>
+          <div class="swiper-slide">4</div>
+        </div>
+      </div>
+       <div class="swiper-button-prev" id='prevv'></div>
+      <div class="swiper-button-next" id='nextt'></div>
+    </div>
+    <!-- 我们的故事 -->
   </div>
 </template>
 
@@ -144,50 +206,50 @@ export default {
           description: "品牌知名度教育机构"
         }
       ],
-      bannerBox3:[
+      bannerBox3: [
         {
           img: require("@/assets/wallstreet/banner4.jpg"),
           name: "英语学习兴趣不减 华尔街英语广州线上活动火热进行中",
           time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
-        },{
+          content:
+            "自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。"
+        },
+        {
           img: require("@/assets/wallstreet/banner4.jpg"),
           name: "英语学习兴趣不减 活动火热进行中",
           time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
-        },{
+          content:
+            "自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。"
+        },
+        {
           img: require("@/assets/wallstreet/banner4.jpg"),
           name: "英语学习兴趣不减 线上活动火热进行中",
           time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
-        },{
-          img: require("@/assets/wallstreet/banner4.jpg"),
-          name: "英语学习兴趣不减 华尔街英语广",
-          time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
+          content:
+            "自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。"
         }
       ],
-      bannerBox4:[
+      bannerBox4: [
         {
           img: require("@/assets/wallstreet/banner4.jpg"),
           name: "英语学习兴趣不减 华尔街英语广州",
           time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
-        },{
+          content:
+            "自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。"
+        },
+        {
           img: require("@/assets/wallstreet/banner4.jpg"),
           name: "英语学习兴趣不减 华尔街英语火热进行中",
           time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
-        },{
+          content:
+            "自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。"
+        },
+        {
           img: require("@/assets/wallstreet/banner4.jpg"),
           name: "英语学习兴趣不减 华尔进行中",
           time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
-        },{
-          img: require("@/assets/wallstreet/banner4.jpg"),
-          name: "英语学习兴趣不减 华尔街英语广中",
-          time: "2020年3月7日",
-          content:'自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。'
+          content:
+            "自全国疫情暴发至今，华尔街英语积极响应国家号召，暂停了全国线下实体中心的课程及活动，并采取系统消毒防护的相关措施，有效保障学员和员工的健康安全。"
         }
       ]
     };
@@ -202,19 +264,25 @@ export default {
     new Swiper(".swiper-container2", {
       // loop: true,
       // 如果需要前进后退按钮
-      nextButton: ".swiper-button-next2",
-      prevButton: ".swiper-button-prev2"
+      nextButton: "#next",
+      prevButton: "#prev"
+    });
+     new Swiper(".swiper-container3", {
+      // loop: true,
+      // 如果需要前进后退按钮
+      nextButton: "#nextt",
+      prevButton: "#prevv"
     });
   }
 };
 </script>
 
 
-<style  lang='stylus'>
+<style lang='stylus'>
 .wallstreet {
   width: 100%;
   background: #fff;
-  height: 4000px;
+  height: auto;
 }
 
 .content_header {
@@ -384,9 +452,10 @@ export default {
 }
 
 .about_slider {
-  width: 1310px;
+  width: 1048px;
   height: 648px;
   margin: 0 auto;
+  position: relative;
 
   .hover_title {
     color: red;
@@ -394,40 +463,127 @@ export default {
   }
 
   .slider_box {
-    width: 1100px;
+    width: 900px;
     height: 607px;
     margin: 0 auto;
     overflow: hidden;
-    position relative
+
     .swiper-container2 {
-      width: 1100px;
+      width: 900px;
       height: 607px;
-      .swiper-slide{
-        display flex
-        justify-content space-between
+
+      .swiper-slide {
+        display: flex;
+        justify-content: space-around;
       }
-      .slide_wrap{
-        width 250px
-        height 607px
-        .wrap_img{
-          width 250px 
-          height 250px
-          border-radius 50%
-          overflow hidden
-          img{
-            width 100%
-            height 100%
+
+      .slide_wrap {
+        width: 250px;
+        height: 607px;
+
+        .wrap_img {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
           }
         }
-        h3{
-          margin 20px 0
-          font-size 30px
+
+        h3 {
+          margin: 20px 0;
+          font-size: 30px;
         }
-        .wrap_time{
-          margin-bottom 20px
+
+        .wrap_time {
+          margin-bottom: 20px;
         }
       }
     }
+
+    #prev {
+      position: absolute;
+      top: 310px;
+      left: 0;
+    }
+
+    #next {
+      position: absolute;
+      top: 320px;
+      right: 0;
+    }
+  }
+}
+
+.radius {
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about_footer {
+  width: 100%;
+  height: 700px;
+  background: #f2f1f1;
+  position relative
+  .footer_size {
+    width: 1181px;
+    height: auto;
+    margin: 0 auto;
+    h2 {
+      font-size: 40px;
+      color: #043458;
+      margin-left 60px
+    }
+  }
+  .swiper-container3{
+    width 870px 
+    height 466px
+    margin 0 auto
+    overflow hidden
+    margin-top 45px
+    .swiper-slide{
+      display flex
+      justify-content space-around
+    }
+    .slide_three_box{
+      width 250px
+      height 466px
+      .slide_three_box_img{
+        width 250px 
+        height 250px
+        img{
+          width 100%
+          height 100%
+        }
+      }
+      h3{
+        color: #ee2d42;
+        margin 20px 0
+        font-size 30px
+      }
+      .slide_three_box_time{
+        margin-bottom 20px
+      }
+    }
+  }
+  #prevv{
+    position absolute
+    left 450px
+    top 220px
+  }
+  #nextt{
+    position absolute
+    right 450px
+    top 220px
   }
 }
 </style>
