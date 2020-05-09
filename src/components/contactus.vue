@@ -53,6 +53,61 @@
         </div>
       </div>
     </div>
+    <div class="query">
+      <div class="query_btn">
+        <i class="iconfont icon-you"></i>
+        <p>发送</p>
+      </div>
+      <h1>还有其它疑问？</h1>
+      <p>请填写以下表格，我们将在24小时内与你联系。</p>
+      <p>*必填</p>
+      <div class="query_box">
+        <div class="left">
+          <div>
+            <p>真实姓名*</p>
+            <input type="text" placeholder="姓" />
+          </div>
+          <div>
+            <p></p>
+            <input type="text" placeholder="名" />
+          </div>
+          <div>
+            <p>手机号码*</p>
+            <input type="text" placeholder="+86" />
+          </div>
+          <div>
+            <p>电子邮箱地址*</p>
+            <input type="text" placeholder="电子邮箱地址" />
+          </div>
+        </div>
+        <div class="right">
+          <div>
+            <p>省份*</p>
+            <input type="text" list="city" placeholder="-请选择省份-" />
+            <datalist id="city">
+              <option>男</option>
+              <option>女</option>
+            </datalist>
+          </div>
+          <div>
+            <p>所在城市*</p>
+            <input type="text" list="city1" placeholder="-请选择城市-" />
+            <datalist id="city1">
+              <option>男</option>
+              <option>女</option>
+            </datalist>
+          </div>
+          <div>
+            <p>选择类别*</p>
+            <input type="text" list="city2" placeholder="-请选择类别-" />
+            <datalist id="city2">
+              <option>男</option>
+              <option>女</option>
+            </datalist>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -65,10 +120,9 @@ export default {
 </script>
 <style lang="stylus">
 .contactus {
-  width: 1182px;
-  margin: 0 auto;
-
   .contactusBtn {
+    width: 1182px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 
@@ -95,6 +149,9 @@ export default {
   }
 
   .CTT {
+    width: 1182px;
+    margin: 0 auto;
+    box-sizing: border-box;
     padding: 0 80px;
 
     .title {
@@ -168,8 +225,128 @@ export default {
         div a:hover {
           color: #0082a9;
         }
-        div:nth-child(2) h1 , div:nth-child(3) h1{
-            margin-top 20px
+
+        div:nth-child(2) h1, div:nth-child(3) h1 {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .query {
+    width: 100%;
+    background: #d7dee4;
+    position: relative;
+    padding 80px 0 220px 0
+    
+    .query_btn {
+      width: 136px;
+      height: 136px;
+      background-color: #ee2d42;
+      position: absolute;
+      z-index: 1;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      justify-content: center;
+      box-shadow: 0 10px 30px #ee2d42;
+      left: 50%;
+      margin-left: -68px;
+      bottom: 60px;
+
+      i {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 10px;
+        font-weight bold
+      }
+    }
+
+    .query_btn:hover {
+      opacity: 0.8;
+    }
+
+    >h1 {
+      text-align: center;
+      font-size: 40px;
+      color: #043458;
+      margin-bottom 6px
+    }
+
+    >p {
+      font-size: 14px;
+      text-align: center;
+      color: #043458;
+    }
+
+    >p:nth-child(4) {
+      text-align: right;
+      width: 860px;
+      margin: 8px auto;
+      margin-bottom 15px
+    }
+
+    .query_box {
+      width: 860px;
+      margin: 0 auto;
+      display: flex;
+
+      .left {
+        flex: 1;
+        padding: 0 40px;
+
+        >div {
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #043458;
+          }
+
+          input {
+            border: none;
+            width: 222px;
+            height: 33px;
+            outline: none;
+            box-sizing: border-box;
+            padding: 0 10px;
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        padding: 0 40px;
+
+        >div {
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #043458;
+          }
+
+          input {
+            border: none;
+            width: 222px;
+            height: 33px;
+            outline: none;
+            box-sizing: border-box;
+            padding: 0 10px;
+          }
         }
       }
     }
