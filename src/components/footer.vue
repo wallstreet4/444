@@ -121,7 +121,6 @@
 </script>
 
 <style lang='stylus'>
-<<<<<<< HEAD
 	.bottom{
 		width: 1041px;
 		margin: 0 auto;
