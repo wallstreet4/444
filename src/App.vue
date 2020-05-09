@@ -9,6 +9,10 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import footer from "./components/footer.vue";
+<<<<<<< HEAD
+=======
+import experience from "./components/experience.vue";
+>>>>>>> o
 
 export default {
   name: "App",
@@ -18,6 +22,7 @@ export default {
   }
 };
 </script>
+
 
 
 <style>
