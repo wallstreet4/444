@@ -23,6 +23,15 @@ export default new Router({
 	 {
 	 	path: '/learningjourney',
 	 	component: () => import('../components/learningjourney.vue')
+	 },{
+	   path: '/channel',
+	   component: () => import('../components/channel.vue')
+	 }, {
+	   path: '/occupation',
+	   component: () => import('../components/occupation.vue')
+	 }, {
+	   path: '/teachers',
+	   component: () => import('../components/teachers.vue')
 	 }
   ]
 })

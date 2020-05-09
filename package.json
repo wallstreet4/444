@@ -25,6 +25,7 @@
     "style-loader": "^1.2.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
+    "swiper": "^5.3.8",
     "vue-template-compiler": "^2.6.11",
     "when": "^3.7.8"
   },
