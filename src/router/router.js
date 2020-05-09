@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+<<<<<<< HEAD
 
 //组件模块
 import index from '@/components/index'
 import curriculum from '@/components/lrt/curriculum'
 import onlinecourses from '@/components/lrt/onlinecourses'
+import newmembers from "@/components/newmembers"
+import memberlogin from "@/components/memberlogin"
+import contactus from "@/components/contactus"
  
 Vue.use(Router)
  
@@ -32,7 +36,22 @@ export default new Router({
 	 }, {
 	   path: '/teachers',
 	   component: () => import('../components/teachers.vue')
+	 },{
+	 	path: "/newmembers",
+	 	name: "newmembers",
+	 	component: newmembers
+	 },
+	 {
+	 	path: "/memberlogin",
+	 	name: "memberlogin",
+	 	component: memberlogin
+	 },
+	 {
+	 	path: "/contactus",
+	 	name: "contactus",
+	 	component: contactus
 	 }
   ]
 })
+
 
