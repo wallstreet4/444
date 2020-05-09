@@ -3,7 +3,7 @@
     <div class="top" :class='{on: off}'>
 		<div class="center">
 			<ul class='left'>
-				<router-link to='index' class='on' tag='li'>会员/学员</router-link>
+				<router-link to='/' class='on' tag='li'>会员/学员</router-link>
 				<router-link to='enterprise' tag='li'>企业合作</router-link>
 				<router-link to='occupation' tag='li'>职业生涯</router-link>
 				<router-link to='channel' tag='li'>渠道合作</router-link>
