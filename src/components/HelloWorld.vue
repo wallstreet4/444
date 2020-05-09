@@ -3,17 +3,17 @@
     <div class="top" :class='{on: off}'>
 		<div class="center">
 			<ul class='left'>
-				<li class='on'>会员/学员</li>
-				<li>企业合作</li>
-				<li>职业生涯</li>
-				<li>渠道合作</li>
+				<router-link to='index' class='on' tag='li'>会员/学员</router-link>
+				<router-link to='enterprise' tag='li'>企业合作</router-link>
+				<router-link to='occupation' tag='li'>职业生涯</router-link>
+				<router-link to='channel' tag='li'>渠道合作</router-link>
 			</ul>
 			<ul class='right'>
-				<li>最近学习中心</li>
-				<li>关于华尔街英语</li>
-				<li class='on'>新会员</li>
-				<li>会员登录</li>
-				<li>学员通道</li>
+				<router-link to='learning' tag='li'>最近学习中心</router-link>
+				<router-link to='wallstreet' tag='li'>关于华尔街英语</router-link>
+				<router-link to='newmembers' tag='li' class='on'>新会员</router-link>
+				<router-link to='memberlogin' tag='li'>会员登录</router-link>
+				<router-link to='studentchannel' tag='li'>学员通道</router-link>
 				<li>中|EN</li>
 			</ul>
 		</div>
@@ -22,14 +22,14 @@
 		<div class="center">
 			<img src="../../static/lrt/logo-wse.jpg" alt="">
 			<ul>
-				<li>你选择华尔街英语是因为</li>
+				<router-link to='because' tag='li'>你选择华尔街英语是因为</router-link>
 				<router-link to='curriculum' tag='li'>课程</router-link>
 				<router-link to='onlinecourses' tag='li'>在线课程</router-link>
-				<li>学习之旅</li>
-				<li>优质师资</li>
-				<li>最新消息</li>
-				<li>联系我们</li>
-				<li class='on'>免费体验</li>
+				<router-link to='learningjourney' tag='li'>学习之旅</router-link>
+				<router-link to='teachers' tag='li'>优质师资</router-link>
+				<router-link to='latest' tag='li'>最新消息</router-link>
+				<router-link to='contactus' tag='li'>联系我们</router-link>
+				<router-link to='experience' tag='li' class='on'>免费体验</router-link>
 			</ul>
 		</div>
 	</div>
