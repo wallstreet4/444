@@ -22,7 +22,7 @@ export default {
 
 <style>
 	#app{
-		padding-top: 110px;
+		padding-top: 150px;
 	}
 ul,li,ol{
 	list-style: none;

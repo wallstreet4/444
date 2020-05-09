@@ -1,7 +1,7 @@
 <template>
 	<div class="curriculum">
 		<div class="top">
-			<router-link to='index' tag='span'>首页</router-link>
+			<router-link to='/' tag='span'>首页</router-link>
 			|
 			<span>课程</span>
 		</div>

@@ -9,6 +9,8 @@ import newmembers from "@/components/newmembers"
 import memberlogin from "@/components/memberlogin"
 import contactus from "@/components/contactus"
 import learning from '@/components/learning'
+import latest from '@/components/latest'
+import wallstreet from '@/components/wallstreet'
  
 Vue.use(Router)
  

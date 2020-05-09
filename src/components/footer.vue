@@ -1,6 +1,5 @@
 <template>
 	<div class="footer">
-<<<<<<< HEAD
 		<div class="footers">
 			<div class="center">
 				<div class="img">
