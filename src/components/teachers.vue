@@ -64,12 +64,18 @@
 
 <style lang="stylus">
   .teachers {
+<<<<<<< HEAD
 
+=======
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
     * {
       margin: 0;
       padding: 0;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
     .Ftitle {
       width: 60%;
       height: 120px;
@@ -80,11 +86,17 @@
       line-height: 120px;
       margin-bottom: 60px;
     }
+<<<<<<< HEAD
 
     .headImg {
       width: 100%;
     }
 
+=======
+    .headImg {
+      width: 100%;
+    }
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
     .threeImg {
       width: 1181px;
       height: 402px;
@@ -93,7 +105,10 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
       .prev,
       .next {
         font-size: 70px;
@@ -101,17 +116,26 @@
         color: #043458;
         cursor: pointer;
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
       .centerBox {
         width: 870px;
         height: 100%;
         // border: 1px solid #000;
         overflow: hidden;
+<<<<<<< HEAD
 
         .nextActive {
           transform: translateX(-580px);
         }
 
+=======
+        .nextActive {
+          transform: translateX(-580px);
+        }
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
         .fiveBox {
           width: 1450px;
           height: 100%;
@@ -120,7 +144,10 @@
           align-items: center;
           justify-content: space-around;
           transition: 2s;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
           .fEveryBox {
             width: 250px;
             height: 402px;
@@ -128,11 +155,17 @@
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+<<<<<<< HEAD
 
             .fiveImg {
               width: 250px;
             }
 
+=======
+            .fiveImg {
+              width: 250px;
+            }
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
             .fiveTitle {
               font-size: 30px;
               line-height: 40px;
@@ -143,7 +176,10 @@
               max-height: 120px;
               overflow: hidden;
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
             .fiveInfo {
               font-size: 16px;
               line-height: 24px;
@@ -154,4 +190,8 @@
       }
     }
   }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> e92b4f4a495156a16fd728c802aed4fdcb1b9144
